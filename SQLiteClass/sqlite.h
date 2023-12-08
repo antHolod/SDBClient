@@ -13,6 +13,9 @@ public:
 private:
     QString m_user;
     QString m_pass;
+
+    QSqlDatabase m_db;
+    bool DbConnect();
 };
 
 #endif // SQLITE_H
