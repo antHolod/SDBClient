@@ -22,6 +22,7 @@ private:
 
 signals:
     void onOkBtnClicked();
+    void onCancelBtnClicked();
 };
 
 #endif // SIMPLEAUTHFORM_H
