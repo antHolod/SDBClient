@@ -5,6 +5,7 @@
 
 #include "Forms/simpleauthform.h"
 #include "Forms/simpleregisterform.h"
+#include "SQLiteClass/sqlite.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -25,6 +26,10 @@ private:
     Ui::MainWindow* ui;
     SimpleAuthForm authForm;
     SimpleRegisterForm regForm;
+    Sqlite *userBase;
+
+    QString m_user;
+    QString m_pass;
 
 private slots:
     void AuthFormOk();

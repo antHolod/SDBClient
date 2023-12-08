@@ -25,7 +25,8 @@ void MainWindow::display()
 
 void MainWindow::AuthFormOk()
 {
-
+    QString tmp_login = authForm.GetLogin(),tmp_pass = authForm.GetPass();
+    userBase = new Sqlite(tmp_login,tmp_pass);
 }
 
 void MainWindow::AuthFormCancel()

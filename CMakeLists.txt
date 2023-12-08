@@ -30,6 +30,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
         Forms/simpleauthform.h Forms/simpleauthform.cpp Forms/simpleauthform.ui
         Forms/simpleregisterform.h Forms/simpleregisterform.cpp Forms/simpleregisterform.ui
+        SQLiteClass/sqlite.h SQLiteClass/sqlite.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET SDBClient APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
