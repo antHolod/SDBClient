@@ -15,6 +15,9 @@ public:
     explicit SimpleAuthForm(QWidget* parent = nullptr);
     ~SimpleAuthForm();
 
+    QString GetLogin()          {return m_login;}
+    QString GetPass()           {return m_pass;}
+
 private:
     Ui::SimpleAuthForm* ui;
     QString m_login;
