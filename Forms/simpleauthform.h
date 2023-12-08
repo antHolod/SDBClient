@@ -26,6 +26,12 @@ private:
 signals:
     void onOkBtnClicked();
     void onCancelBtnClicked();
+    void onRegBtnClicked();
+
+private slots:
+    void on_btnCancel_clicked();
+    void on_btnReg_clicked();
+    void on_btnOk_clicked();
 };
 
 #endif // SIMPLEAUTHFORM_H

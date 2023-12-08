@@ -25,5 +25,10 @@ private:
     Ui::MainWindow* ui;
     SimpleAuthForm authForm;
     SimpleRegisterForm regForm;
+
+private slots:
+    void AuthFormOk();
+    void AuthFormCancel();
+    void AuthFormReg();
 };
 #endif // MAINWINDOW_H

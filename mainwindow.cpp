@@ -6,6 +6,11 @@ MainWindow::MainWindow(QWidget* parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    //Connecting SIGNALS from authorization form width SLOTS in main window
+    connect(&authForm,SIGNAL(onCancelBtnClicked()),this,SLOT(AuthFormCancel()));
+    connect(&authForm,SIGNAL(onOkBtnClicked()),this,SLOT(AuthFormOk()));
+    connect(&authForm,SIGNAL(onRegBtnClicked()),this,SLOT(AuthFormReg()));
 }
 
 MainWindow::~MainWindow()
@@ -16,4 +21,19 @@ MainWindow::~MainWindow()
 void MainWindow::display()
 {
     authForm.show();
+}
+
+void MainWindow::AuthFormOk()
+{
+
+}
+
+void MainWindow::AuthFormCancel()
+{
+    QApplication::exit();
+}
+
+void MainWindow::AuthFormReg()
+{
+
 }

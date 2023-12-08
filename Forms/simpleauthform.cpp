@@ -14,3 +14,19 @@ SimpleAuthForm::~SimpleAuthForm()
 {
     delete ui;
 }
+
+void SimpleAuthForm::on_btnCancel_clicked()
+{
+    emit onCancelBtnClicked();
+}
+
+void SimpleAuthForm::on_btnReg_clicked()
+{
+    emit onRegBtnClicked();
+}
+
+void SimpleAuthForm::on_btnOk_clicked()
+{
+    emit onOkBtnClicked();
+}
+
