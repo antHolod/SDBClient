@@ -8,6 +8,11 @@ Sqlite::Sqlite(QString user, QString pass)
 {
     this->m_user = user;
     this->m_pass = pass;
+
+    if(DbConnect())
+    {
+
+    }
 }
 
 bool Sqlite::DbConnect()
