@@ -4,6 +4,7 @@
 #include <QDebug>
 #include <QSqlDatabase>
 #include <QString>
+#include <QSqlQuery>
 
 class Sqlite {
 public:
@@ -19,6 +20,7 @@ private:
     QString m_user;
     QString m_pass;
     bool m_connection;
+    QString m_db_name = "useinfo";
 
     QSqlDatabase m_db;
 
