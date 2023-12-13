@@ -38,5 +38,20 @@ bool Sqlite::DbPrepear()
 {
     QSqlQuery query;
     QString reqest;
-    //reqest = "CREATE TABLE "
+    reqest.append("CREATE TABLE IF NOT EXISTS users(");
+    reqest.append("id INTEGER PRIMARY KEY AUTOINCREMENT,");
+    reqest.append("name TEXT UNIQUE CHECK(name != '' AND name != ' '),");
+    reqest.append("x_point INTEGER DEFAUT 0,");
+    reqest.append("y_point INTEGER DEFAUT 0,");
+    reqest.append("width INTEGER DEFAUT 0,");
+    reqest.append("height INTEGER DEFAUT 0,");
+    reqest.append("last_session TEXT NULL DEFAULT NULL);");
+    if(!query.exec(reqest)) return false;
+
+    reqest.clear();
+
+    reqest.append("CREATE TABLE IF NOT EXISTS sessions(");
+    reqest.append("id INTEGER PRIMARY KEY AUTOINCREMENT,");
+
+    return true;
 }
